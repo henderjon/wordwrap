@@ -50,9 +50,11 @@ func main() {
 			log.Println(err)
 		}
 
-		out := wordwrap.Wrap(in.Text(), 80)
+		out := wordwrap.Simple(in.Text(), 80)
 
 		fmt.Println(out)
 	}
 	fmt.Println(wordwrap.ColGuide)
+
+	// fmt.Println(wordwrap.ReWrap(lipsum, 80))
 }
