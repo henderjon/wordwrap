@@ -91,7 +91,7 @@ func Simple(s string, breakCol int) string {
 			wordbuf.Reset()
 		}
 	}
-	// @TODO deal with last/trailing/ending words ...
+	// @TODO can we do better at dealing with last/trailing/ending words?
 	if wordbuf.Len() > 0 {
 		wordLen := utf8.RuneCount(wordbuf.Bytes())
 		if cc+wordLen > breakCol {
